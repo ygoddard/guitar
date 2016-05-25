@@ -57,6 +57,7 @@ namespace Guitar
 
 
                 showMenu();
+                int n;
 
             }
 
