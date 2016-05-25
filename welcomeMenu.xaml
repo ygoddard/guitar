@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="Guitar.welcomeMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Guitar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+   Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource backgound}">
+        <Hub Header="Welcome" HorizontalAlignment="Center" Height="262" Margin="42,48,-1,0" VerticalAlignment="Top" Width="359" FontFamily="Comic Sans MS" FontSize="8">
+        </Hub>
+        <TextBlock x:Name="userName" HorizontalAlignment="Left" Height="51" Margin="196,148,0,0" TextWrapping="Wrap" Text="Ariely" VerticalAlignment="Top" FontSize="40" FontStyle="Italic" Width="176"/>
+        <Image x:Name="image" Source="assets/ariely.png" HorizontalAlignment="Left" Height="81" Margin="82,134,0,0" VerticalAlignment="Top" Width="83"/>
+        <Button x:Name="settingButton" HorizontalAlignment="Left" Background="#FF57BD1C" Height="90" Margin="30,232,0,0" VerticalAlignment="Top" Width="90">
+            <Image Source="assets/settings.png" Width="65"/>
+        </Button>
+        <Button x:Name="messageButton" HorizontalAlignment="Left"  Background="#FF1EAAF9" Height="90" Margin="150,232,0,0" VerticalAlignment="Top" Width="90">
+            <Image Source="assets/message.png" Width="65"/>
+        </Button>
+        <Button x:Name="recordButton" HorizontalAlignment="Left"  Background="#FF1EAAF9" Height="90" Margin="270,232,0,0" VerticalAlignment="Top" Width="90">
+            <Image Source="assets/record.png"/>
+        </Button>
+        <Button x:Name="profileButton" HorizontalAlignment="Left" Background="#FF57BD1C" Height="90" Margin="30,318,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.5,0.5">
+            <Image Source="assets/profile.png"/>
+        </Button>
+        <Button x:Name="learnButton" HorizontalAlignment="Left" Background="#FFE80827" Height="170" Margin="150,318,0,0" VerticalAlignment="Top" Width="229" RenderTransformOrigin="0.5,0.5" Click="learnButton_Click">
+            <StackPanel>
+                <Image Source="assets/learn2.png" Height="121" Width="83"/>
+                <TextBlock Text="Learn To Play" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="176" FontFamily="Comic Sans MS"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="effectsButton" HorizontalAlignment="Left" Background="#FF080808" Height="212" Margin="30,407,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.5,0.5">
+            <StackPanel>
+                <Image Source="assets/effects.jpg" Height="132" Width="94"/>
+                <TextBlock Text="effects" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="72" FontFamily="Comic Sans MS"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="playSongsButton" HorizontalAlignment="Left" Background="Orange" Height="134" Margin="150,485,0,0" VerticalAlignment="Top" Width="229" RenderTransformOrigin="0.5,0.5">
+            <StackPanel>
+                <Image Source="assets/playSongs.png" Height="81.523" Width="184.83" RenderTransformOrigin="0.265,0.503" UseLayoutRounding="False" d:LayoutRounding="Auto">
+                    <Image.RenderTransform>
+                        <CompositeTransform Rotation="-11.018"/>
+                    </Image.RenderTransform>
+                </Image>
+                <TextBlock Text="Play Songs"  HorizontalAlignment="right" VerticalAlignment="Top"  Width="98" FontFamily="Comic Sans MS" Height="32" RenderTransformOrigin="0.57,-0.381"/>
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>
