@@ -16,7 +16,7 @@
         <TextBlock x:Name="PicText" HorizontalAlignment="Left" Margin="96,381,0,0" TextWrapping="Wrap" Text="Select Your Profile Pic" VerticalAlignment="Top" FontSize="23" Height="67" Width="221" Foreground="#FFFBF3F3"/>
         <Button x:Name="signUpButton" Content="Sign Up" HorizontalAlignment="Left" Height="63" Margin="144,548,0,0" VerticalAlignment="Top" Width="68" Click="signUpButton_Click"/>
         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left"  PlaceholderText="********" Height="39" Margin="82,246,0,0" VerticalAlignment="Top" Width="254"/>
-        <Button x:Name="galleryButton"  HorizontalAlignment="Left" Height="124" Margin="74,421,0,0" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}">
+        <Button x:Name="galleryButton"  HorizontalAlignment="Left" Height="124" Margin="74,421,0,0" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Click="galleryButton_Click">
             <Button.RenderTransform>
                 <CompositeTransform ScaleX="-1"/>
             </Button.RenderTransform>

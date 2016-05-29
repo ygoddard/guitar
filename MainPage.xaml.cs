@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Phone.UI.Input;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -32,20 +33,15 @@ namespace Guitar
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        private static MobileServiceCollection<Credential> items;
+        //private static MobileServiceCollection<Credential> items;
 
-        public static async void generateCredential(String name, String password, String mail)
-        {
-            Credential item = new Credential
-            {
-                id = name,
-                Password = password,
-                Email = mail,
-                pathToPic = "pathToPic"
-            };
+        static public Credential userDetails;
+
+        public static async void generateCredential(Credential c)
+        {           
             try
             {
-                await App.MobileService.GetTable<Credential>().InsertAsync(item);
+                await App.MobileService.GetTable<Credential>().InsertAsync(c);
 
             }
             catch (MobileServiceInvalidOperationException n)
@@ -54,12 +50,28 @@ namespace Guitar
             }
             try
             {
-                items.Add(item);
+                //items.Add(item);
             }
             catch (Exception r)
             {
                 Debug.WriteLine(r);
             }
+        }
+
+        public static async Task<Credential> fetchCred(String userName)
+        {
+
+            MainPage.userDetails = await App.MobileService.GetTable<Credential>().LookupAsync(userName);
+            return MainPage.userDetails;
+        }
+
+        public static async Task<Credential> updateCred(Credential c)
+        {
+            //USAGE: To generate a new Credential with the fields to update, and fill the other
+            //fields with the old details, found in MainPage.userDetails.
+            MainPage.userDetails = c;
+            await App.MobileService.GetTable<Credential>().UpdateAsync(c);
+            return MainPage.userDetails;
         }
 
         /// <summary>
@@ -80,8 +92,7 @@ namespace Guitar
 
         private void signInButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(signIn));
-            // Frame.Navigate(typeof(signIn)); 
+            Frame.Navigate(typeof(signIn)); 
         }
 
         private void signUpButton_Click(object sender, RoutedEventArgs e)

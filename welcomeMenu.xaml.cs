@@ -30,6 +30,8 @@ namespace Guitar
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+            userName.Text = MainPage.userDetails.id;
+
         }
 
 
@@ -52,24 +54,9 @@ namespace Guitar
             Frame.Navigate(typeof(chooseLesson));
         }
 
-        private void messageButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void settingButton_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void profileButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void effectsButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            Frame.Navigate(typeof(settings));
         }
     }
 }

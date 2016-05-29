@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -59,11 +60,31 @@ namespace Guitar
             }
         }
 
-        private void button_Click_1(object sender, RoutedEventArgs e)
+        private async void button_Click_1(object sender, RoutedEventArgs e)
         {
-            if (NameTextBox.Text != "" && passwordBox.Password != "")
+            if (NameTextBox.Text != "" /*&& passwordBox.Password != ""*/)
             {
-                Frame.Navigate(typeof(welcomeMenu));
+                try
+                {
+                    await MainPage.fetchCred(NameTextBox.Text);
+                    if (MainPage.userDetails.Password == passwordBox.Password)
+                    {
+                        Frame.Navigate(typeof(welcomeMenu));
+                    }
+                    else
+                    {
+                        WarningText.Text = "Username or Password is wrong!";
+                        WarningText.Foreground = new SolidColorBrush(Windows.UI.Colors.Red);
+                    }
+                }
+                catch(Exception a)
+                {
+                    Debug.WriteLine(a);
+                }
+
+            }else
+            {
+                WarningText.Text = "fill all fields!";
             }
         }
     }
