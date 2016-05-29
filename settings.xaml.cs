@@ -39,7 +39,9 @@ namespace Guitar
             ComboBoxItem newItemLed2 = new ComboBoxItem();
             newItemLed2.Content = "Fire";
             ledTehmeComboBox.Items.Add(newItemLed2);
-
+            updateButton.IsEnabled = false;
+            ledThemeButton.IsEnabled = false;
+            backgroundButton.IsEnabled = false;
         }
 
         /// <summary>
