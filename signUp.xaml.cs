@@ -56,7 +56,15 @@ namespace Guitar
         {
             if (NameTextBox.Text != "" && passwordBox.Password !="" && MailTextBox.Text != "")
             {
-                MainPage.generateCredential(NameTextBox.Text, passwordBox.Password, MailTextBox.Text);
+                Credential item = new Credential
+                {
+                    id = NameTextBox.Text,
+                    Password = passwordBox.Password,
+                    Email = MailTextBox.Text,
+                    pathToPic = "pathToPic"
+                };
+                MainPage.userDetails = item;
+                MainPage.generateCredential(item);
                 Frame.Navigate(typeof(welcomeMenu));
             } else
             {
@@ -76,6 +84,12 @@ namespace Guitar
         private void cameraButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(camera));
+        }
+
+        private void galleryButton_Click(object sender, RoutedEventArgs e)
+        {
+            //App.MobileService.GetTable<Credential>()
+            
         }
     }
 }

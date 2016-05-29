@@ -16,13 +16,13 @@
         <Button x:Name="settingButton" HorizontalAlignment="Left" Background="#FF57BD1C" Height="90" Margin="30,232,0,0" VerticalAlignment="Top" Width="90" Click="settingButton_Click">
             <Image Source="assets/settings.png" Width="65"/>
         </Button>
-        <Button x:Name="messageButton" HorizontalAlignment="Left"  Background="#FF1EAAF9" Height="90" Margin="150,232,0,0" VerticalAlignment="Top" Width="90" Click="messageButton_Click">
+        <Button x:Name="messageButton" HorizontalAlignment="Left"  Background="#FF1EAAF9" Height="90" Margin="150,232,0,0" VerticalAlignment="Top" Width="90">
             <Image Source="assets/message.png" Width="65"/>
         </Button>
         <Button x:Name="recordButton" HorizontalAlignment="Left"  Background="#FF1EAAF9" Height="90" Margin="270,232,0,0" VerticalAlignment="Top" Width="90">
             <Image Source="assets/record.png"/>
         </Button>
-        <Button x:Name="profileButton" HorizontalAlignment="Left" Background="#FF57BD1C" Height="90" Margin="30,318,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.5,0.5" Click="profileButton_Click">
+        <Button x:Name="profileButton" HorizontalAlignment="Left" Background="#FF57BD1C" Height="90" Margin="30,318,0,0" VerticalAlignment="Top" Width="90" RenderTransformOrigin="0.5,0.5">
             <Image Source="assets/profile.png"/>
         </Button>
         <Button x:Name="learnButton" HorizontalAlignment="Left" Background="#FFE80827" Height="170" Margin="150,318,0,0" VerticalAlignment="Top" Width="229" RenderTransformOrigin="0.5,0.5" Click="learnButton_Click">
@@ -31,7 +31,7 @@
                 <TextBlock Text="Learn To Play" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="176" FontFamily="Comic Sans MS"/>
             </StackPanel>
         </Button>
-        <Button x:Name="effectsButton" HorizontalAlignment="Left" Background="#FF080808" Height="212" Margin="30,407,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.5,0.5" Click="effectsButton_Click">
+        <Button x:Name="effectsButton" HorizontalAlignment="Left" Background="#FF080808" Height="212" Margin="30,407,0,0" VerticalAlignment="Top" Width="94" RenderTransformOrigin="0.5,0.5">
             <StackPanel>
                 <Image Source="assets/effects.jpg" Height="132" Width="94"/>
                 <TextBlock Text="effects" HorizontalAlignment="Center" VerticalAlignment="Top"  Width="72" FontFamily="Comic Sans MS"/>

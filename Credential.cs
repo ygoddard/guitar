@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Guitar
 {
-    class Credential
+    public class Credential
     {
         public string id { get; set; }
         public string Password { get; set; }

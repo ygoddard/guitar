@@ -88,11 +88,12 @@
     <Compile Include="chooseLesson.xaml.cs">
       <DependentUpon>chooseLesson.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Credential.cs" />
-    <Compile Include="effects.xaml.cs">
-      <DependentUpon>effects.xaml</DependentUpon>
+    <Compile Include="chords.xaml.cs">
+      <DependentUpon>chords.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GuitarMethods.cs" />
+    <Compile Include="chordsFlow.cs" />
+    <Compile Include="Credential.cs" />
+    <Compile Include="Guitar.cs" />
     <Compile Include="learnToPlay.xaml.cs">
       <DependentUpon>learnToPlay.xaml</DependentUpon>
     </Compile>
@@ -101,14 +102,11 @@
       <DependentUpon>lesson.xaml</DependentUpon>
     </Compile>
     <Compile Include="lessonDB.cs" />
-    <Compile Include="mail.xaml.cs">
-      <DependentUpon>mail.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="playSongs.xaml.cs">
-      <DependentUpon>playSongs.xaml</DependentUpon>
+    <Compile Include="settings.xaml.cs">
+      <DependentUpon>settings.xaml</DependentUpon>
     </Compile>
     <Compile Include="signIn.xaml.cs">
       <DependentUpon>signIn.xaml</DependentUpon>
@@ -131,9 +129,6 @@
   <ItemGroup>
     <Content Include="Assets\A2.jpg" />
     <Content Include="Assets\ariely.PNG" />
-    <Content Include="Assets\arrow.png" />
-    <Content Include="Assets\arrow2.png" />
-    <Content Include="Assets\arrow3.png" />
     <Content Include="Assets\back1.jpg" />
     <None Include="app.config" />
     <None Include="Assets\camera.png" />
@@ -180,7 +175,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="effects.xaml">
+    <Page Include="chords.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,15 +187,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="mail.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="playSongs.xaml">
+    <Page Include="settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
