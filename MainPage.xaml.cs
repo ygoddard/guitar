@@ -80,7 +80,7 @@ namespace Guitar
 
         private void signInButton_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(chooseLesson));
+            Frame.Navigate(typeof(signIn));
             // Frame.Navigate(typeof(signIn)); 
         }
 

@@ -51,9 +51,9 @@ namespace Guitar
                 //GuitarMethods.playChord(sl.getchordsList()[0]);
 
                 //set stream to return bool
-                //if (GuitarMethods.stream(sl.getchordsList().ToArray(), sl.getDelaysList().ToArray(), true)){
-                //showMenu();
-                //}
+               // if (GuitarMethods.Stream(sl.getchordsList().ToArray(), sl.getDelaysList().ToArray(), true)){
+              //       showMenu();
+             //  }
 
 
                 showMenu();
@@ -63,9 +63,14 @@ namespace Guitar
         }
 
 
+
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+            String parameter = e.Parameter as string;
+            int n = Int32.Parse(parameter);
+            App.lessonNumber = n;
         }
 
 

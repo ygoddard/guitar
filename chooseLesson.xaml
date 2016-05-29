@@ -23,5 +23,6 @@
         <TextBox x:Name="textBox_Copy2" FontSize="16" HorizontalAlignment="Left" Height="54" Margin="157,394,0,0" TextWrapping="Wrap" Text="Playing a Song: Orot - Avraham Tal" VerticalAlignment="Top" Width="225"/>
         <TextBox x:Name="textBox_Copy3" FontSize="16" HorizontalAlignment="Left" Height="41" Margin="157,475,0,0" TextWrapping="Wrap" Text="Learning Chords: F, Dm" VerticalAlignment="Top" Width="225"/>
         <TextBox x:Name="textBox_Copy4" FontSize="16" HorizontalAlignment="Left" Height="55" Margin="157,537,0,0" TextWrapping="Wrap" Text="Playing a Song: House of Rising Sun - Animals" VerticalAlignment="Top" Width="225"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Visibility="Collapsed" Height="25" Margin="131,605,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="65"/>
     </Grid>
 </Page>

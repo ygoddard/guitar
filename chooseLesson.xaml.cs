@@ -94,38 +94,38 @@ namespace Guitar
         {
             App.lessonNumber = 1;
             lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson));
+            Frame.Navigate(typeof(lesson),"1");
         }
 
         private void lesson1Button_Click(object sender, RoutedEventArgs e)
         {
             App.lessonNumber = 2;
             lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson));
+            Frame.Navigate(typeof(lesson),"2");
         }
         private void lesson2Button_Click(object sender, RoutedEventArgs e)
         {
             App.lessonNumber = 3;
             lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson));
+            Frame.Navigate(typeof(lesson),"3");
         }
         private void lesson3Button_Click(object sender, RoutedEventArgs e)
         {
             App.lessonNumber = 4;
             lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson));
+            Frame.Navigate(typeof(lesson),4);
         }
         private void lesson4Button_Click(object sender, RoutedEventArgs e)
         {
             App.lessonNumber = 5;
             lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson));
+            Frame.Navigate(typeof(lesson),5);
         }
         private void lesson5Button_Click(object sender, RoutedEventArgs e)
         {
             App.lessonNumber = 6;
             lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson));
+            Frame.Navigate(typeof(lesson),6);
         }
 
     }

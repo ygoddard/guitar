@@ -51,5 +51,25 @@ namespace Guitar
         {
             Frame.Navigate(typeof(chooseLesson));
         }
+
+        private void messageButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void settingButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void profileButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void effectsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

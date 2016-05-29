@@ -89,6 +89,9 @@
       <DependentUpon>chooseLesson.xaml</DependentUpon>
     </Compile>
     <Compile Include="Credential.cs" />
+    <Compile Include="effects.xaml.cs">
+      <DependentUpon>effects.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GuitarMethods.cs" />
     <Compile Include="learnToPlay.xaml.cs">
       <DependentUpon>learnToPlay.xaml</DependentUpon>
@@ -98,8 +101,14 @@
       <DependentUpon>lesson.xaml</DependentUpon>
     </Compile>
     <Compile Include="lessonDB.cs" />
+    <Compile Include="mail.xaml.cs">
+      <DependentUpon>mail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="playSongs.xaml.cs">
+      <DependentUpon>playSongs.xaml</DependentUpon>
     </Compile>
     <Compile Include="signIn.xaml.cs">
       <DependentUpon>signIn.xaml</DependentUpon>
@@ -171,6 +180,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="effects.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="learnToPlay.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,9 +192,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="mail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="playSongs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="signIn.xaml">
       <SubType>Designer</SubType>

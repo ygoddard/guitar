@@ -18,7 +18,7 @@ namespace Guitar
 
         public abstract bool PlayChord(Chord p_chord);
 
-        public abstract void Stream(Chord[] p_chords,int[] p_msDelay,bool p_wait);
+        public  void Stream(Chord[] p_chords,double[] p_msDelay,bool p_wait) { }
 
     }
 
