@@ -25,15 +25,27 @@ namespace Guitar
     /// </summary>
     public sealed partial class lesson : Page
     {
-        int lessonNumber= App.lessonNumber;
+        int lessonNumber;
         singleLesson sl;
-        int i = 0;
+        int i;
         int lessonSize;
 
         public lesson()
         {
             this.InitializeComponent();
-            popUp(lessonNumber.ToString());
+            i = 0;
+            //popUp(lessonNumber.ToString());
+            
+
+        }
+
+
+
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+            lessonNumber = MainPage.userDetails.lastLesson;
             sl = chooseLesson.DB.getLesson(lessonNumber);
             if (sl.getType() == "chords")
             {
@@ -44,33 +56,23 @@ namespace Guitar
                 //TODO
                 //GuitarMethods.setMode(Mode.Chords);
                 //GuitarMethods.playChord(sl.getchordsList()[0])){
-            } else    //its a song
+            }
+            else    //its a song
             {
                 //TODO
                 //GuitarMethods.setMode(Mode.Stream);
                 //GuitarMethods.playChord(sl.getchordsList()[0]);
 
                 //set stream to return bool
-               // if (GuitarMethods.Stream(sl.getchordsList().ToArray(), sl.getDelaysList().ToArray(), true)){
-              //       showMenu();
-             //  }
+                // if (GuitarMethods.Stream(sl.getchordsList().ToArray(), sl.getDelaysList().ToArray(), true)){
+                //       showMenu();
+                //  }
 
 
                 showMenu();
 
             }
 
-        }
-
-
-
-
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
-            String parameter = e.Parameter as string;
-            int n = Int32.Parse(parameter);
-            App.lessonNumber = n;
         }
 
 
@@ -136,9 +138,9 @@ namespace Guitar
 
         private void nextLesoonButton_Click(object sender, RoutedEventArgs e)
         {
-            if (App.lessonNumber < 6)
+            if (lessonNumber < 6)
             {
-                App.lessonNumber++;
+                MainPage.userDetails.lastLesson++;
                 i = 0;
                 Frame.Navigate(typeof(lesson));
             } else

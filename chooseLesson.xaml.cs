@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using System.Threading;
 using Windows.UI.Popups;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -90,43 +91,50 @@ namespace Guitar
             }
         }
 
+        private async void updateLessonNumAndNav(int lessonNum)
+        {
+            MainPage.userDetails.lastLesson = lessonNum;
+            Credential c = MainPage.userDetails;
+            await MainPage.updateCred(c);
+            //Debug.WriteLine();
+            Frame.Navigate(typeof(lesson));
+        }
+
+
         private void lessonButton_Click(object sender, RoutedEventArgs e)
         {
-            App.lessonNumber = 1;
-            lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson),"1");
+            updateLessonNumAndNav(1);
         }
 
         private void lesson1Button_Click(object sender, RoutedEventArgs e)
         {
-            App.lessonNumber = 2;
-            lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson),"2");
+            updateLessonNumAndNav(2);
+
         }
         private void lesson2Button_Click(object sender, RoutedEventArgs e)
         {
-            App.lessonNumber = 3;
-            lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson),"3");
+            updateLessonNumAndNav(3);
+
         }
         private void lesson3Button_Click(object sender, RoutedEventArgs e)
         {
-            App.lessonNumber = 4;
-            lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson),4);
+            updateLessonNumAndNav(4);
+
         }
         private void lesson4Button_Click(object sender, RoutedEventArgs e)
         {
-            App.lessonNumber = 5;
-            lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson),5);
+            updateLessonNumAndNav(5);
+
         }
         private void lesson5Button_Click(object sender, RoutedEventArgs e)
         {
-            App.lessonNumber = 6;
-            lastLesson = App.lessonNumber;
-            Frame.Navigate(typeof(lesson),6);
+            updateLessonNumAndNav(6);
+
         }
 
+        private void chooseLessonButton_Click(object sender, RoutedEventArgs e)
+        {
+            updateLessonNumAndNav(MainPage.userDetails.lastLesson);
+        }
     }
 }

@@ -9,14 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource backgound}">
-        <Button x:Name="chooseLessonButton" Content="continue from last point" HorizontalAlignment="Left" Height="60" Margin="67,93,0,0" VerticalAlignment="Top" Width="273" Click="lesson1Button_Click"/>
+        <Button x:Name="chooseLessonButton" Content="continue from last point" HorizontalAlignment="Left" Height="60" Margin="67,93,0,0" VerticalAlignment="Top" Width="273" Click="chooseLessonButton_Click" />
         <Button x:Name="lesson1Button" Content="lesson #1" HorizontalAlignment="Left" Height="60" Margin="22,184,0,0" VerticalAlignment="Top" Width="95" Click="lessonButton_Click"/>
         <TextBlock x:Name="textBlock" FontSize="30" FontFamily="comic sans ms" HorizontalAlignment="Left" Height="46" Margin="95,26,0,0" TextWrapping="Wrap" Text="choose a lesson" VerticalAlignment="Top" Width="233"/>
-        <Button x:Name="lesson6Button" Content="lesson #6" HorizontalAlignment="Left" Height="60" Margin="22,533,0,0" VerticalAlignment="Top" Width="95" Click="lessonButton_Click"/>
-        <Button x:Name="lesson5Button" Content="lesson #5" HorizontalAlignment="Left" Height="60" Margin="22,465,0,0" VerticalAlignment="Top" Width="95" Click="lessonButton_Click"/>
-        <Button x:Name="lesson4Button" Content="lesson #4" HorizontalAlignment="Left" Height="60" Margin="22,389,0,0" VerticalAlignment="Top" Width="95" Click="lessonButton_Click"/>
-        <Button x:Name="lesson3Button" Content="lesson #3" HorizontalAlignment="Left" Height="60" Margin="22,315,0,0" VerticalAlignment="Top" Width="95" Click="lessonButton_Click"/>
-        <Button x:Name="lesson2Button" Content="lesson #2" HorizontalAlignment="Left" Height="60" Margin="22,248,0,0" VerticalAlignment="Top" Width="95" Click="lessonButton_Click"/>
+        <Button x:Name="lesson6Button" Content="lesson #6" HorizontalAlignment="Left" Height="60" Margin="22,533,0,0" VerticalAlignment="Top" Width="95" Click="lesson5Button_Click"/>
+        <Button x:Name="lesson5Button" Content="lesson #5" HorizontalAlignment="Left" Height="60" Margin="22,465,0,0" VerticalAlignment="Top" Width="95" Click="lesson4Button_Click"/>
+        <Button x:Name="lesson4Button" Content="lesson #4" HorizontalAlignment="Left" Height="60" Margin="22,389,0,0" VerticalAlignment="Top" Width="95" Click="lesson3Button_Click"/>
+        <Button x:Name="lesson3Button" Content="lesson #3" HorizontalAlignment="Left" Height="60" Margin="22,315,0,0" VerticalAlignment="Top" Width="95" Click="lesson2Button_Click"/>
+        <Button x:Name="lesson2Button" Content="lesson #2" HorizontalAlignment="Left" Height="60" Margin="22,248,0,0" VerticalAlignment="Top" Width="95" Click="lesson1Button_Click"/>
         <TextBox x:Name="textBox" FontSize="16" HorizontalAlignment="Left" Height="41" Margin="157,193,0,0" TextWrapping="Wrap" Text="Learning Chords: Em, Am, D" VerticalAlignment="Top" Width="225" RenderTransformOrigin="0,0"/>
         <TextBox x:Name="textBox_Copy" FontSize="16" HorizontalAlignment="Left" Height="41" Margin="157,257,0,0" TextWrapping="Wrap" Text="Learning Chords: G, C, E" VerticalAlignment="Top" Width="225"/>
         <TextBox x:Name="textBox_Copy1" FontSize="16"  HorizontalAlignment="Left" Height="41" Margin="157,325,0,0" TextWrapping="Wrap" Text="Overall Practice" VerticalAlignment="Top" Width="225"/>

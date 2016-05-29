@@ -79,6 +79,7 @@ namespace Guitar
                 c.Password = passwordBox.Password;
             else c.Password = MainPage.userDetails.Password;
             c.pathToPic = "pathToPic";
+            c.lastLesson = MainPage.userDetails.lastLesson;
             await MainPage.updateCred(c);
             MainPage.userDetails = c;
             passwordBox.Password = "";

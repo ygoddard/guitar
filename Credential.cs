@@ -12,13 +12,6 @@ namespace Guitar
         public string Password { get; set; }
         public string Email { get; set; }
         public string pathToPic { get; set; }
-        public bool passwordVerify(String toCompare)
-        {
-            if (Password == toCompare)
-            {
-                return true;
-            }
-            return false;
-        }
+        public int lastLesson { get; set; }
     }
 }

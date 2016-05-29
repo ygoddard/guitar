@@ -61,7 +61,8 @@ namespace Guitar
                     id = NameTextBox.Text,
                     Password = passwordBox.Password,
                     Email = MailTextBox.Text,
-                    pathToPic = "pathToPic"
+                    pathToPic = "pathToPic",
+                    lastLesson = 1
                 };
                 MainPage.userDetails = item;
                 MainPage.generateCredential(item);
