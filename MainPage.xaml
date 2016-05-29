@@ -9,8 +9,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="LayoutRoot" Background="{StaticResource backgound}">
-        <Hub Header="Guitarino" HorizontalAlignment="Left" Height="262" Margin="41,65,0,0" VerticalAlignment="Top" Width="309" FontFamily="Comic Sans MS">
-            <HubSection Header="My First Guitar" FontFamily="Comic Sans MS">
+        <Hub Header="Star" HorizontalAlignment="Left" Height="262" Margin="41,65,0,0" VerticalAlignment="Top" Width="309" FontFamily="Comic Sans MS">
+            <HubSection Header="Simply a Smart Guitar" FontFamily="Comic Sans MS">
                 <DataTemplate>
                     <Grid/>
                 </DataTemplate>
